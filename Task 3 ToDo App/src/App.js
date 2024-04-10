@@ -4,6 +4,7 @@ import TodoList from "./components/TaskList";
 import AddTodoForm from "./components/AddTodoForm";
 
 const App = () => {
+  const title = process.env.TITLE;
   const [todos, setTodos] = useState([]);
 
   const handleAddTodo = (text) => {
@@ -27,7 +28,7 @@ const App = () => {
 
   return (
     <div className="container text-center">
-      <Header title="ToDo App" />
+      <Header title={title} />
       <AddTodoForm onAdd={handleAddTodo} />
       <TodoList todos={todos} onDelete={handleDeleteTodo} />
     </div>
