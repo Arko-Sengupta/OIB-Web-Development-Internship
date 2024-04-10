@@ -1,0 +1,15 @@
+
+/* Display */
+.display {
+  margin-bottom: 10px;
+}
+
+.display input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}

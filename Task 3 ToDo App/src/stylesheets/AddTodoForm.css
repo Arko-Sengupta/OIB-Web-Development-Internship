@@ -1,0 +1,41 @@
+/* Base styling for the input field */
+#inputField {
+  padding-left: 300px;
+}
+
+/* Responsive adjustments for the input field */
+
+/* Large screens (greater than 992px) */
+@media screen and (min-width: 993px) {
+  #inputField {
+      padding-left: 300px;
+  }
+}
+
+/* Medium screens (768px - 992px) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #inputField {
+      padding-left: 200px;
+  }
+}
+
+/* Small screens (421px - 767px) */
+@media screen and (min-width: 421px) and (max-width: 767px) {
+  #inputField {
+      padding-left: 100px;
+  }
+}
+
+/* Extra small screens (301px - 420px) */
+@media screen and (min-width: 301px) and (max-width: 420px) {
+  #inputField {
+      padding-left: 50px;
+  }
+}
+
+/* Tiny screens (300px or less) */
+@media screen and (max-width: 300px) {
+  #inputField {
+      padding-left: 10px;
+  }
+}
