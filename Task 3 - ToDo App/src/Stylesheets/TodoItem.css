@@ -1,0 +1,97 @@
+/* Base styling for the task */
+#task {
+  padding-left: 320px;
+}
+
+/* Base styling for the delete button */
+#delbtn {
+  padding-right: 400px;
+}
+
+/* Responsive adjustments for the task */
+
+/* Large screens (greater than 992px) */
+@media screen and (min-width: 993px) {
+  #task {
+      padding-left: 320px;
+  }
+}
+
+/* Medium screens (768px - 992px) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #task {
+      padding-left: 210px;
+  }
+}
+
+/* Small screens (421px - 767px) */
+@media screen and (min-width: 421px) and (max-width: 767px) {
+  #task {
+      padding-left: 100px;
+  }
+}
+
+/* Extra small screens (301px - 420px) */
+@media screen and (min-width: 301px) and (max-width: 420px) {
+  #task {
+      padding-left: 50px;
+  }
+}
+
+/* Tiny screens (300px or less) */
+@media screen and (max-width: 300px) {
+  #task {
+      padding-left: 10px;
+  }
+}
+
+/* Responsive adjustments for the delete button */
+
+/* Larger screens (1400px - 1600px) */
+@media screen and (min-width: 1400px) and (max-width: 1599px) {
+  #delbtn {
+      padding-right: 330px;
+  }
+}
+
+/* Medium-large screens (1200px - 1399px) */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  #delbtn {
+      padding-right: 250px;
+  }
+}
+
+/* Medium screens (992px - 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  #delbtn {
+      padding-right: 190px;
+  }
+}
+
+/* Small screens (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #delbtn {
+      padding-right: 160px;
+  }
+}
+
+/* Extra small screens (515px - 767px) */
+@media screen and (min-width: 515px) and (max-width: 767px) {
+  #delbtn {
+      padding-right: 100px;
+  }
+}
+
+/* Tiny screens (335px - 514px) */
+@media screen and (min-width: 335px) and (max-width: 514px) {
+  #delbtn {
+      padding-right: 70px;
+  }
+}
+
+/* Smallest screens (244px or less) */
+@media screen and (max-width: 334px) {
+  #delbtn {
+      padding-right: 40px;
+  }
+}
