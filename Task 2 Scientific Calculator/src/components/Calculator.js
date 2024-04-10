@@ -1,59 +1,50 @@
 import React, { useState, useEffect } from "react";
 import Display from "./CalComponents/Display";
 import Keypad from "./CalComponents/Keypad";
-import "../CompStyles/Calculator.css";
+import "../Stylesheets/Calculator.css";
 
-function useCalculator() {
+const useCalculator = () => {
   const [expression, setExpression] = useState("");
 
   const addToExpression = (value) => {
     if (!/[+\-*\/.]$/.test(expression) || !/[+\-*\/.]/.test(value)) {
-      setExpression(prevExpression => prevExpression + value);
+      setExpression((prevExpression) => prevExpression + value);
     }
   };
 
   const evaluateExpression = () => {
     try {
-      const result = eval(expression);
-      setExpression(result.toString());
+      setExpression(eval(expression).toString());
     } catch (error) {
       setExpression("Error");
     }
   };
 
   const deleteLastCharacter = () => {
-    setExpression(prevExpression => prevExpression.slice(0, -1));
+    setExpression((prevExpression) => prevExpression.slice(0, -1));
   };
 
   const clearExpression = () => {
     setExpression("");
   };
 
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      const { key } = event;
-      if (key.match(/[0-9()+\-*/.=]/)) {
-        addToExpression(key);
-      } else if (key === "Enter") {
-        evaluateExpression();
-      } else if (key === "Escape") {
-        clearExpression();
-      } else if (key === "Backspace") {
-        deleteLastCharacter();
-      }
-    };
+  useEffect(() => {const handleKeyDown = (event) => {
+                       const { key } = event;
+                       if (key.match(/[0-9()+\-*/.=]/)) {addToExpression(key);} 
+                       else if (key === "Enter") {evaluateExpression();} 
+                       else if (key === "Escape") {clearExpression();} 
+                       else if (key === "Backspace") {deleteLastCharacter();}
+                     };
+                 
+                     document.addEventListener("keydown", handleKeyDown);
+                     return () => {document.removeEventListener("keydown", handleKeyDown);
+                     };
+                   }, [ addToExpression, evaluateExpression, deleteLastCharacter, clearExpression ]);
 
-    document.addEventListener("keydown", handleKeyDown);
+  return {expression, addToExpression, evaluateExpression, deleteLastCharacter, clearExpression};
+};
 
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [addToExpression, evaluateExpression, deleteLastCharacter, clearExpression]);
-
-  return { expression, addToExpression, evaluateExpression, deleteLastCharacter, clearExpression };
-}
-
-function Calculator() {
+const Calculator = () => {
   const { expression, addToExpression, evaluateExpression, deleteLastCharacter, clearExpression } = useCalculator();
 
   return (
@@ -67,6 +58,6 @@ function Calculator() {
       />
     </div>
   );
-}
+};
 
 export default Calculator;

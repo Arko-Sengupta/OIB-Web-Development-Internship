@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import "../stylesheets/TodoItem.css";
+import "../Stylesheets/TodoItem.css";
 
 const TodoItem = ({ todo, onDelete }) => {
   return (

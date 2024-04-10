@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Button";
-import "../../CompStyles/CalCompStyles/Keypad.css";
+import "../../Stylesheets/CalCompStyles/Keypad.css";
 
 function Keypad({ onInput, onClear, onCalculate, onBack }) {
   const buttons = [

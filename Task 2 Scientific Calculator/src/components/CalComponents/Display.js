@@ -1,5 +1,5 @@
 import React from "react";
-import "../../CompStyles/CalCompStyles/Display.css";
+import "../../Stylesheets/CalCompStyles/Display.css";
 
 function Display({ expression }) {
   return (

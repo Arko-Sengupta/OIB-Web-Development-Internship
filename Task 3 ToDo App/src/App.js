@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
-import TodoList from "./components/TaskList";
-import AddTodoForm from "./components/AddTodoForm";
+import Header from "./Components/Header";
+import TodoList from "./Components/TaskList";
+import AddTodoForm from "./Components/AddTodoForm";
 
 const App = () => {
   const title = process.env.TITLE;

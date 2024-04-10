@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Calculator from "./components/Calculator";
+import Calculator from "./Components/Calculator";
 
 function App(){
   return (
