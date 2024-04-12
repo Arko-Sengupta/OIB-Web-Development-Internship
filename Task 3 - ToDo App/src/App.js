@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Header from "./Components/Header";
 import TodoList from "./Components/TaskList";
 import AddTodoForm from "./Components/AddTodoForm";
+import CustomPackage from "./package-custom.json"
 
 const App = () => {
-  const title = process.env.TITLE;
+  const title = CustomPackage.TODO_TITLE
   const [todos, setTodos] = useState([]);
 
   const handleAddTodo = (text) => {
