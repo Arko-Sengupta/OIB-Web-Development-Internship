@@ -1,0 +1,16 @@
+/* Header CSS */
+.Header {
+    background-color: transparent;
+}
+
+.Header:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    font-size: large;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}

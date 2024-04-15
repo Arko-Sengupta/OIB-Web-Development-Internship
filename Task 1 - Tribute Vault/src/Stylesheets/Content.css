@@ -1,0 +1,15 @@
+/* Content CSS */
+.content-title {
+  font-size: xx-large;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-style: normal;
+}
+
+.content-text {
+  font-size: x-large;
+  font-family: "Rochester", cursive;
+  font-weight: bold;
+  font-style: normal;
+}
