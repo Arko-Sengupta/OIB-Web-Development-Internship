@@ -144,18 +144,3 @@ src/
    ```
 
 ---
-
-## Coding Standards
-
-| Standard            | Convention                                                                  |
-|---------------------|-----------------------------------------------------------------------------|
-| Comments            | None — Self-Documenting Identifiers Only                                    |
-| Directory Names     | Pascal Case (`TributeVault`, `Calculator`, `ToDo`, `Components`, `Styles`)  |
-| File Names          | Pascal Case (`TributeVault.jsx`, `CarouselSlide.css`, `TributeData.js`)     |
-| Function Names      | Pascal Case (`UseCalculator`, `HandleAdd`, `OnScroll`, `Toggle`)            |
-| Function Style      | Arrow Functions Exclusively                                                 |
-| CSS / JS Separation | All Stylesheets Live In A `Styles/` Sibling To `Components/`                |
-
----
-
-*Developed During The Web Development & Design Internship At **Oasis Infobyte Private Limited**.*
