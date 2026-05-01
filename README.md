@@ -13,7 +13,8 @@ A Unified **React + Vite** Application Consolidating All Three Internship Projec
 3. [Directory Structure](#directory-structure)
 4. [Getting Started](#getting-started)
 5. [Installation](#installation)
-6. [Coding Standards](#coding-standards)
+6. [Deployment](#deployment)
+7. [Coding Standards](#coding-standards)
 
 ---
 
@@ -44,14 +45,14 @@ A Task Management App Featuring:
 
 ## Dependencies
 
-| Layer        | Technology                             |
-|--------------|----------------------------------------|
-| Framework    | React 18                               |
-| Build Tool   | Vite 5                                 |
-| Styling      | Custom CSS With CSS Custom Properties  |
-| Fonts        | Cinzel, Inter, Space Mono (Google Fonts) |
-| Language     | JavaScript (ES2022+)                   |
-| Package Mgr  | npm                                    |
+| Layer        | Technology                              |
+|--------------|-----------------------------------------|
+| Framework    | React 18                                |
+| Build Tool   | Vite 5                                  |
+| Styling      | Custom CSS With CSS Custom Properties   |
+| Fonts        | Cinzel, Inter, Space Mono (Google Fonts)|
+| Language     | JavaScript (ES2022+)                    |
+| Package Mgr  | npm                                     |
 
 ---
 
@@ -144,3 +145,50 @@ src/
    ```
 
 ---
+
+## Deployment
+
+[![Deploy With Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Arko-Sengupta/OIB-Web-Development-Internship)
+
+### Vercel (Recommended)
+
+1. **Import The Repository Into Vercel**
+   - Visit [vercel.com/new](https://vercel.com/new) And Import The GitHub Repository.
+
+2. **Vercel Auto-Detects The Following Settings**
+
+   | Setting          | Value           |
+   |------------------|-----------------|
+   | Framework Preset | Vite            |
+   | Build Command    | `npm run build` |
+   | Output Directory | `dist`          |
+   | Install Command  | `npm install`   |
+
+3. **Click Deploy** — No Additional Configuration Required.
+
+### Manual Build
+
+Generate A Static Production Build Locally:
+
+```bash
+npm run build
+```
+
+The `dist/` Folder Contains The Deployable Output And Can Be Served By Any Static Hosting Provider.
+
+---
+
+## Coding Standards
+
+| Standard            | Convention                                                                  |
+|---------------------|-----------------------------------------------------------------------------|
+| Comments            | None — Self-Documenting Identifiers Only                                    |
+| Directory Names     | Pascal Case (`TributeVault`, `Calculator`, `ToDo`, `Components`, `Styles`)  |
+| File Names          | Pascal Case (`TributeVault.jsx`, `CarouselSlide.css`, `TributeData.js`)     |
+| Function Names      | Pascal Case (`UseCalculator`, `HandleAdd`, `OnScroll`, `Toggle`)            |
+| Function Style      | Arrow Functions Exclusively                                                 |
+| CSS / JS Separation | All Stylesheets Live In A `Styles/` Sibling To `Components/`                |
+
+---
+
+*Developed During The Web Development & Design Internship At **Oasis Infobyte Private Limited**.*
