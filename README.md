@@ -1,54 +1,161 @@
 # OIB Web Development & Design Internship
+
 ## Overview
-These projects entail the internship responsibilities I undertook during my tenure as a Web Development & Design Intern at Oasis Infobyte Private Limited.
 
-## Table of Content
-1. [Introduction](#introduction)
-2. [Getting Started](#getting-started)
-3. [Installation](#installation)
+A Unified **React + Vite** Application Consolidating All Three Internship Projects For **Oasis Infobyte Private Limited** Into A Single, Professionally Structured Codebase With A Shared Navigation Shell.
 
-## Introduction
-During the **Internship** at **Oasis Infobyte Private Limited**, I had the privilege of working on three engaging web development projects, each designed to captivate users with its simplicity and functionality:
+---
 
-**1. Task 1: Tribute Page**
-- Developed a **Tribute Page** as per project specifications.
-- Implemented responsive design for optimal viewing across devices.
-- Refer to [Task 1](https://github.com/Arko-Sengupta/OIB-Web-Development-Internship/tree/main/Task%201%20-%20Tribute%20Vault)
+## Table Of Contents
 
-**2. Scientific Calculator**
-- Designed and developed a **Scientific Calculator** with required functionalities.
-- Ensured user-friendly interface and intuitive design elements.
-- Refer to [Task 2](https://github.com/Arko-Sengupta/OIB-Web-Development-Internship/tree/main/Task%202%20-%20Scientific%20Calculator)
+1. [Projects](#projects)
+2. [Dependencies](#dependencies)
+3. [Directory Structure](#directory-structure)
+4. [Getting Started](#getting-started)
+5. [Installation](#installation)
+6. [Coding Standards](#coding-standards)
 
-**3. ToDo App**
-- Created a **ToDo App** with comprehensive task management capabilities.
-- Integrated features for adding, and deleting tasks.
-- Refer to [Task 3](https://github.com/Arko-Sengupta/OIB-Web-Development-Internship/tree/main/Task%203%20-%20ToDo%20App)
+---
+
+## Projects
+
+### Task 1 — Tribute Vault
+A Tribute Page Dedicated To **Robert Downey Jr.**, Featuring:
+- Full-Viewport Hero Section With **Parallax Scroll** Effect
+- Section-Based Navigation Across Early Life, Career, Filmography, Business, Music, And Awards
+- Cinzel-Styled Drop-Cap Content With A Decorative Gem Divider
+- Fully Responsive Layout That Degrades Parallax To Static On Touch Devices
+
+### Task 2 — Scientific Calculator
+A Dark-Themed Scientific Calculator Featuring:
+- **Keyboard Support** (Digits, Operators, Enter, Escape, Backspace)
+- Color-Coded Keypad — Numbers, Operators, Functions, Constants, And Equals Each Have Distinct Visual Treatments
+- Space Mono LED-Style Display With Green Glow
+- Supports `sin`, `cos`, `tan`, `ln`, `log`, `sqrt`, `factorial`, `π`, `e`, And Power Operations
+
+### Task 3 — ToDo App
+A Task Management App Featuring:
+- Add, Complete (Toggle), And Delete Tasks
+- Inline Duplicate-Task Warning With No Browser Alerts
+- Live Completion Counter In The Header
+- Slide-In Animation On Task Creation, CSS-Drawn Check And Delete Icons
+
+---
+
+## Dependencies
+
+| Layer        | Technology                             |
+|--------------|----------------------------------------|
+| Framework    | React 18                               |
+| Build Tool   | Vite 5                                 |
+| Styling      | Custom CSS With CSS Custom Properties  |
+| Fonts        | Cinzel, Inter, Space Mono (Google Fonts) |
+| Language     | JavaScript (ES2022+)                   |
+| Package Mgr  | npm                                    |
+
+---
+
+## Directory Structure
+
+```
+src/
+├── Main.jsx
+├── App.jsx
+├── Styles/
+│   ├── Index.css
+│   └── App.css
+├── Data/
+│   └── TributeData.js
+└── Pages/
+    ├── TributeVault/
+    │   ├── TributeVault.jsx
+    │   ├── Components/
+    │   │   ├── Header.jsx
+    │   │   ├── CarouselSlide.jsx
+    │   │   ├── Content.jsx
+    │   │   └── Footer.jsx
+    │   └── Styles/
+    │       ├── Header.css
+    │       ├── CarouselSlide.css
+    │       └── Content.css
+    ├── Calculator/
+    │   ├── ScientificCalculator.jsx
+    │   ├── Components/
+    │   │   ├── Calculator.jsx
+    │   │   ├── Display.jsx
+    │   │   ├── Keypad.jsx
+    │   │   └── Button.jsx
+    │   └── Styles/
+    │       ├── Calculator.css
+    │       ├── Display.css
+    │       └── Keypad.css
+    └── ToDo/
+        ├── TodoApp.jsx
+        ├── Components/
+        │   ├── TodoHeader.jsx
+        │   ├── AddTodoForm.jsx
+        │   ├── TaskList.jsx
+        │   └── TodoItem.jsx
+        └── Styles/
+            ├── TodoApp.css
+            ├── AddTodoForm.css
+            └── TodoItem.css
+```
+
+---
 
 ## Getting Started
-Before exploring the projects, ensure you have the following prerequisites:
-- Programming Language: [Node v20.X](https://nodejs.org/en/blog/release/v20.11.0)
-- Package Manager: [npm](https://www.npmjs.com/)
-- Version Control: [Git](https://git-scm.com/)
-- Integrated Development Environment: [Visual Studio Code](https://code.visualstudio.com/), [PyCharm](https://www.jetbrains.com/pycharm/)
+
+**Prerequisites**
+
+| Requirement | Version |
+|-------------|---------|
+| Node.js     | V20.x+  |
+| npm         | V10.x+  |
+| Git         | Latest  |
+
+---
 
 ## Installation
-1. Clone Repository
+
+1. **Clone The Repository**
    ```bash
-   https://github.com/Arko-Sengupta/OIB-Web-Development-Internship.git
+   git clone https://github.com/Arko-Sengupta/OIB-Web-Development-Internship.git
    ```
 
-2. Navigate to the Project Directory
+2. **Navigate To The Project Directory**
    ```bash
-   cd/<Project-Directory>/<Task-X>
+   cd OIB-Web-Development-Internship
    ```
 
-3. Install Dependencies
+3. **Install Dependencies**
    ```bash
    npm install
    ```
 
-4. Start Application
+4. **Start The Development Server**
    ```bash
-   npm start
+   npm run dev
    ```
+
+5. **Build For Production**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## Coding Standards
+
+| Standard            | Convention                                                                  |
+|---------------------|-----------------------------------------------------------------------------|
+| Comments            | None — Self-Documenting Identifiers Only                                    |
+| Directory Names     | Pascal Case (`TributeVault`, `Calculator`, `ToDo`, `Components`, `Styles`)  |
+| File Names          | Pascal Case (`TributeVault.jsx`, `CarouselSlide.css`, `TributeData.js`)     |
+| Function Names      | Pascal Case (`UseCalculator`, `HandleAdd`, `OnScroll`, `Toggle`)            |
+| Function Style      | Arrow Functions Exclusively                                                 |
+| CSS / JS Separation | All Stylesheets Live In A `Styles/` Sibling To `Components/`                |
+
+---
+
+*Developed During The Web Development & Design Internship At **Oasis Infobyte Private Limited**.*

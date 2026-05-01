@@ -1,0 +1,106 @@
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+}
+
+.keypad button {
+  padding: 15px 8px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s var(--ease);
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.keypad button:active { transform: scale(0.93); }
+
+.keypad button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0);
+  transition: background 0.12s;
+}
+
+.keypad button:hover::after { background: rgba(255,255,255,0.06); }
+
+.btn-num {
+  background: #151528;
+  color: var(--text);
+  border-color: rgba(255,255,255,0.07);
+}
+
+.btn-op {
+  background: rgba(124, 58, 237, 0.12);
+  color: var(--purple-light);
+  border-color: rgba(124, 58, 237, 0.22);
+  font-size: 16px;
+}
+
+.btn-op:hover::after { background: rgba(124,58,237,0.12) !important; }
+
+.btn-fn {
+  background: rgba(34, 211, 238, 0.07);
+  color: var(--cyan);
+  border-color: rgba(34, 211, 238, 0.14);
+  font-size: 13px;
+}
+
+.btn-fn:hover::after { background: rgba(34,211,238,0.1) !important; }
+
+.btn-const {
+  background: rgba(249, 115, 22, 0.08);
+  color: #fb923c;
+  border-color: rgba(249, 115, 22, 0.18);
+  font-size: 16px;
+}
+
+.btn-danger {
+  background: rgba(239, 68, 68, 0.09);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.18);
+}
+
+.btn-danger:hover::after { background: rgba(239,68,68,0.12) !important; }
+
+.btn-eq {
+  background: var(--grad);
+  color: #fff;
+  border-color: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+  grid-row: span 2;
+}
+
+.btn-eq:hover { box-shadow: 0 6px 32px rgba(124, 58, 237, 0.6); transform: translateY(-1px); }
+.btn-eq:active { transform: scale(0.96) !important; }
+
+.btn-zero { grid-column: span 2; }
+
+@media (max-width: 500px) {
+  .keypad { gap: 5px; }
+  .keypad button { padding: 13px 4px; font-size: 13px; }
+  .btn-op        { font-size: 15px; }
+  .btn-fn        { font-size: 12px; }
+  .btn-const     { font-size: 14px; }
+  .btn-eq        { font-size: 18px; }
+}
+
+@media (max-width: 380px) {
+  .keypad { gap: 4px; }
+  .keypad button { padding: 11px 2px; font-size: 12px; border-radius: var(--r-xs); }
+  .btn-op        { font-size: 14px; }
+  .btn-fn        { font-size: 11px; }
+  .btn-const     { font-size: 13px; }
+  .btn-eq        { font-size: 16px; }
+}

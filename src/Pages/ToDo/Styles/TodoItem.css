@@ -1,0 +1,121 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  transition: var(--t);
+  animation: ItemSlide 0.28s var(--ease);
+}
+
+@keyframes ItemSlide {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.todo-item:hover {
+  background: rgba(124, 58, 237, 0.05);
+  border-color: rgba(124, 58, 237, 0.22);
+}
+
+.todo-item.done { opacity: 0.5; }
+
+.todo-item__check {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--t);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  position: relative;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.todo-item__check:hover:not(.checked) {
+  border-color: var(--green);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.todo-item__check.checked {
+  background: var(--green);
+  border-color: var(--green);
+  box-shadow: 0 2px 12px rgba(16, 185, 129, 0.4);
+}
+
+.todo-item__check.checked::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 9px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg) translate(-1px, -1px);
+  border-radius: 1px;
+}
+
+.todo-item__text {
+  flex: 1;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  transition: var(--t);
+  word-break: break-word;
+  min-width: 0;
+}
+
+.todo-item.done .todo-item__text {
+  text-decoration: line-through;
+  color: var(--text-3);
+}
+
+.todo-item__delete {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(239, 68, 68, 0.18);
+  background: rgba(239, 68, 68, 0.07);
+  color: #f87171;
+  cursor: pointer;
+  transition: var(--t);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  position: relative;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.todo-item__delete::before,
+.todo-item__delete::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.todo-item__delete::before { transform: rotate(45deg);  }
+.todo-item__delete::after  { transform: rotate(-45deg); }
+
+.todo-item__delete:hover {
+  background: rgba(239, 68, 68, 0.18);
+  border-color: rgba(239, 68, 68, 0.4);
+  transform: scale(1.1) rotate(10deg);
+}
+
+@media (max-width: 480px) {
+  .todo-item { padding: 14px 16px; gap: 12px; }
+  .todo-item__text { font-size: 14px; }
+}
